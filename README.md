@@ -7,7 +7,7 @@ Author: Hubert Krawczyk
 
 **Screens:**
 ![Main screen](https://i.imgur.com/6j07cX3.png)
-![Add screen](https://i.imgur.com/kHs866V.png)
+![Add screen](https://i.imgur.com/7LRGRMV.png)
 
 ## Development server
 
