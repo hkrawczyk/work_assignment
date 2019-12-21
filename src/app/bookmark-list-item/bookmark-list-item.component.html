@@ -1,0 +1,8 @@
+<mat-list-item class="itemList">
+  <a matLine [attr.href]="bookmark.url" target="_blank">{{ bookmark.name }}</a>
+  <div class="hoverButtons">
+    <button mat-icon-button (click)="removeBookmark(bookmark)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-list-item>

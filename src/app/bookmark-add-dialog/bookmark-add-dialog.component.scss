@@ -1,0 +1,15 @@
+.addFormWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.shortForm {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+.buttonWrapper {
+  padding:10px;
+  display: flex;
+  justify-content: space-between;
+}
+

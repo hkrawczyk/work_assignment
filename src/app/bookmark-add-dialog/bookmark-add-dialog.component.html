@@ -1,0 +1,59 @@
+
+<h2 mat-dialog-title>Add new Bookmark</h2>
+
+
+<mat-dialog-content class="addFormWrapper">
+
+  <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate class="shortForm">
+
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+      <mat-error *ngIf="errorHandling('name', 'required')">
+        Please enter bookmark name
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="URL" formControlName="url">
+      <mat-error *ngIf="errorHandling('url', 'required')">
+        Please enter bookmark URL
+      </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field>
+
+      <mat-select [(value)]="selected" formControlName="group">
+        <mat-option [value]="group" *ngFor="let group of bookmarksGroups">
+          {{group}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="errorHandling('group', 'required')">
+        Please enter bookmark group
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="isNewGroup()">
+      <input matInput placeholder="Name new group" formControlName="newGroup">
+      <mat-error *ngIf="errorHandling('newGroup', 'required')">
+        Please enter new bookmark group name
+      </mat-error>
+    </mat-form-field>
+
+    <div class="buttonWrapper">
+      <button mat-flat-button color="primary">Submit</button>
+      <button class="mat-raised-button"
+              (click)="close()">
+        Close
+      </button>
+    </div>
+
+
+  </form>
+
+
+</mat-dialog-content>
+
+
+
+

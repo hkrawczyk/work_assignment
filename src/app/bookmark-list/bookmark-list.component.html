@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-list>
+    <mat-expansion-panel *ngFor="let bookmark of bookmarks | async; let i=index" [expanded]="true" class="mat-expansion-panel-override">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <div class="label"> {{bookmark.groupName || "All"}}</div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        <app-bookmark-list-item *ngFor="let item of bookmark.items"
+                                [bookmark]="item"></app-bookmark-list-item>
+      </p>
+    </mat-expansion-panel>
+
+  </mat-list>
+</mat-card>
